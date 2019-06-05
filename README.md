@@ -23,3 +23,5 @@
     use the public file
   </li>
 </ul>
+
+git reset --hard HEAD~1

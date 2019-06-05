@@ -1,0 +1,36 @@
+Start new branch:
+git checkout master                 //checks out master
+git pull                           //this pulls down the OG master from git hub to my local machine
+git checkout -b name-the-branch   //create and name a branch
+code .                           //opens in code text editor
+    ---make a branch from another branch---
+Git fetch
+Git checkout branch-name
+Git checkout -b branch-of-branch-name
+
+Add pull request:
+git add .                    //idk
+git commit -m               //add message to your commit
+git push                   //push my changes to git hub
+git push --set-upstream origin mdc-texfield-helptext       //terminal will give me this in an error if i dont have a branch already made on GH
+
+
+Delete branch:
+git branch -D the_local_branch
+
+Rebase branch to master:
+1. squash commits on your feature branch
+git rebase -i HEAD~(number of commits you have) aka HEAD~13
+2. pick the top commit and 'f' all the rest into it
+- git push origin branch-name --force
+- git commit --amend  //if you want to change the original commit message
+3. commit changes
+then rebase your branch:
+4. git checkout master
+5. git pull
+6. git checkout feature-branch
+7. git rebase -i origin/master
+8. fix merge conflicts
+git push --force
+Merge master into local branch
+git push HEAD --force (might need this sometimes)
